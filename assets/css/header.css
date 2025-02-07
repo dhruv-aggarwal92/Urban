@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Header Styling */
+.main-header {
+  background: linear-gradient(135deg, #290545, #470303);
+  padding: 15px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Brand / Logo */
+.brand a {
+  font-size: 30px; /* Increased logo size */
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.brand a:hover {
+  color: #ffcc00;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px; /* Made links slightly smaller */
+  padding: 5px 8px;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Underline effect on hover */
+.nav-links a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #ffcc00;
+  transition: width 0.3s ease-in-out;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+/* Responsive Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: rgba(30, 60, 114, 0.95);
+      width: 200px;
+      border-radius: 10px;
+      text-align: center;
+      padding: 15px 0;
+  }
+
+  .nav-links.show {
+      display: flex;
+  }
+
+  .hamburger {
+      display: flex;
+  }
+}

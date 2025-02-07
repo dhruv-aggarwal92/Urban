@@ -1,0 +1,22 @@
+<div class="container my-5">
+    <h1 class="booking-header">Your Bookings</h1>
+    
+    <% if (cust.booking && cust.booking.length > 0) { %>
+      <% for (let c of cust.booking) { %>
+        <div class="card booking-card">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Carpenter: <%= c[1] %></h5>
+            <p class="card-text"><strong>Carpenter ID:</strong> <%= c[0] %></p>
+            <p class="card-text"><strong>Time Slot:</strong> <%= c[2] %></p>
+            <!-- Delete booking form; adjust the route as needed -->
+            <form action="/booking/delete/<%= c[3] %>/<%= c[4] %>" method="POST" class="mt-3">
+              <button type="submit" class="btn btn-danger delete-btn">Delete Booking</button>
+            </form>
+          </div>
+        </div>
+      <% } %>
+    <% } else { %>
+      <p class="text-center">No bookings found.</p>
+    <% } %>
+    
+  </div>

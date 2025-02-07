@@ -1,0 +1,33 @@
+<header class="main-header"> 
+  <nav class="navbar">
+      <!-- Brand / Logo -->
+      <div class="brand">
+          <a href="/">URBAN</a>
+      </div>
+      
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <% if (locals.user) { %>
+              <li><a href="/users/review/<%= cust.id %>">Review</a></li>
+              <li><a href="/users/sign-out">Sign Out</a></li>
+          <% } else { %>
+              <li><a href="/users/log-in">Log In</a></li>
+              <li><a href="/users/sign-up">Sign Up</a></li>
+          <% } %>
+      </ul>
+
+      <!-- Hamburger Menu for Mobile -->
+      <div class="hamburger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
+  </nav>
+</header>
+
+<script>
+  function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('show');
+  }
+</script>

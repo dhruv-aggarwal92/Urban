@@ -1,0 +1,117 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+  background: url("b1.jpg") no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  color: white;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero h1 {
+  font-family: fantasy;
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.hero button {
+  background: #ffcc00;
+  color: black;
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background: #ff9900;
+}
+
+/* Services Section */
+.services {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.service-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.service {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  transition: transform 0.3s, opacity 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding-bottom: 15px;
+  opacity: 0.9;
+}
+
+.service:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* Service Background Images */
+.service-carpentry { background-image: url('https://images.pexels.com/photos/209235/pexels-photo-209235.jpeg'); }
+.service-plumbing { background-image: url('p.jpg'); }
+.service-mechanic { background-image: url('m.jpg'); }
+.service-housecleaning { background-image: url('h.jpg'); }
+.service-electrician { background-image: url('e.jpg'); }
+
+/* Individual Service Sections */
+.service-section {
+  padding: 50px 20px;
+  background: white;
+  margin: 50px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-section h2 {
+  text-align: center;
+  font-size: 32px;
+}
