@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://127.0.0.1:27017/urban_db');
+mongoose.connect('mongodb+srv://aggarwalkrishna:KrishnaD@cluster0.p3l3d.mongodb.net/urban_db');
 
 const db= mongoose.connection;
 
