@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://aggarwalkrishna:KrishnaD@cluster0.p3l3d.mongodb.net/urban_db');
+mongoose.connect(`${process.env.MONGO_URI}`);
 
 const db= mongoose.connection;
 
